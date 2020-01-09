@@ -1,15 +1,8 @@
 module.controller('MainController', [
   '$scope',
   'QuizService',
-  'ImageService',
-  function($scope, QuizService, ImageService) {
+  function($scope, QuizService) {
     $scope.quizService = QuizService;
-
-    $scope.isLoading = true;
-    ImageService.initializeStore().then(() => {
-      $scope.isLoading = false;
-      $scope.$digest();
-    })
   }
 ]);
 
@@ -37,8 +30,7 @@ module.controller('ResultController', [
   '$routeParams',
   '$anchorScroll',
   'QuizService',
-  'ImageService',
-  function($scope, $location, $routeParams, $anchorScroll, QuizService, ImageService) {
+  function($scope, $location, $routeParams, $anchorScroll, QuizService) {
 
     $scope.linkClick = () => {
       $location.path(`/`);
@@ -49,14 +41,12 @@ module.controller('ResultController', [
     $scope.word = QuizService.getWord($routeParams.word);
 
     if ($scope.result) {
-      // Use another module to get image
-      $scope.text = "Tiếp tục";
-      QuizService.increaseScore(1);
-      $scope.resultUrl = ImageService.getRewardImage(QuizService.score);
+      // $scope.text = "Tiếp tục";
+      QuizService.increaseScore(1);    
+      $location.path(`/`);  
     } else {
       $scope.text = "Bắt đầu lại";
       QuizService.reset();
-      $scope.resultUrl = ImageService.getPunishImage();
     }
   }
 ]);
