@@ -1,8 +1,15 @@
 module.controller('MainController', [
   '$scope',
+  '$interval',
   'QuizService',
-  function($scope, QuizService) {
+  function($scope, $interval, QuizService) {
     $scope.quizService = QuizService;
+    $scope.determinateValue = 30;
+
+    $interval(function() {
+      $scope.determinateValue += 1;      
+      if ($scope.determinateValue > 100) $scope.determinateValue = 30;       
+    }, 100, 0, true); 
   }
 ]);
 

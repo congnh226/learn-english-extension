@@ -1,4 +1,4 @@
-let module = angular.module("app", ['ngRoute']);
+let module = angular.module("app", ['ngMaterial', 'ngRoute']);
 
 module.config([
   '$routeProvider',

@@ -36,3 +36,7 @@ a, a:focus {
 .ui.grid > .column.answer {
   padding-bottom: 0;
 }
+
+.app-progress-bar {
+  width: 400px !important;
+}
