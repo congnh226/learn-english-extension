@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Learn English",
-  "description": "Learn English",
-  "version": "1.0",
+  "name": "Learn 4000 English Words",
+  "description": "Learn 4000 English Words",
+  "version": "2.0",
   "browser_action": {
     "default_icon": "logo.png",
     "default_popup": "index.html"
@@ -10,6 +10,5 @@
   "permissions": [
     "activeTab",
     "storage"
-  ],
-  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'" 
+  ]
 }
