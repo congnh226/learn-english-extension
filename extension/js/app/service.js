@@ -10,6 +10,12 @@ module.factory('StorageService', function() {
     },
     setScore(score) {
       localStorage.setItem('score', score);
+    },
+    getHighScore(){
+      return parseInt(localStorage.getItem('highScore') || 0);
+    },
+    setHighScore(highScore) {
+      localStorage.setItem('highScore', highScore);
     }
   }
 });
@@ -19,9 +25,14 @@ module.factory('QuizService', [
   function(StorageService) {
     return {
       score: StorageService.getScore(),
+      highScore: StorageService.getHighScore(),
       increaseScore: function(number) {
         this.score += number;
         StorageService.setScore(this.score);
+        if(this.score > this.highScore){
+          this.highScore = this.score;
+          StorageService.setHighScore(this.highScore);
+        }        
       },
       reset: function() {
         this.score = 0;
