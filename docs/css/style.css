@@ -1,11 +1,18 @@
 body {
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
   height: 100vh;
+  font-size: 3.2vmin;
 }
 
 .flex-col {
   display: flex;
   flex-direction: column;
+  flex: 1;
+}
+
+.answer-container {
+  justify-content: start;
+  gap: 1.5em;
 }
 
 a, a:focus {
@@ -16,7 +23,7 @@ a, a:focus {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
 }
 
 .mg-5 {
@@ -44,7 +51,7 @@ a, a:focus {
 }
 
 .large-text {
-  font-size: 1.7em !important;
+  font-size: 1.2em !important;
 }
 
 .divider-line {
