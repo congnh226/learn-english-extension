@@ -1,8 +1,11 @@
 body {
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-  font-size: 100%;
-  width: 400px;
-  height: 500px;
+  height: 100vh;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 a, a:focus {
@@ -10,9 +13,49 @@ a, a:focus {
 }
 
 .score-container {
-  text-align: right;
-  margin-top: -3.5em;
-  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
+
+.mg-5 {
+  margin: 5px;
+}
+
+.ui.label-clone {
+  display: flex;
+    vertical-align: baseline;
+    
+    margin: 0 .125em;
+    background-color: #e8e8e8;
+    border-color: #e8e8e8;
+    background-image: none;
+    padding: .6em .8em;
+    color: rgba(0, 0, 0, .6);
+    text-transform: none;
+    font-weight: 700;
+    border-radius: .2857rem;
+    box-sizing: border-box;
+}
+
+.small-padding {
+  padding: .6em .8em;
+}
+
+.large-text {
+  font-size: 1.7em !important;
+}
+
+.divider-line {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 1.4em 0;
+}
+.divider-with-text {
+  background: #fff;
+  padding: 0 10px;
 }
 
 .ui.header.main-header {
@@ -23,6 +66,7 @@ a, a:focus {
 
 .index-page, .result-page {
   text-align: center;
+  font-size: 1.7em;
 }
 
 .small {

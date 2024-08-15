@@ -1,13 +1,15 @@
 <div class="index-page">
-  <h2 class="ui horizontal divider header question">
-  {{quiz.question.word}} {{quiz.question.pronounce}}
-  <span class="small">{{quiz.question.type}}</span>
+  <h2 class="divider-line large-text">
+    <span class="divider-with-text">
+      {{quiz.question.word}} {{quiz.question.pronounce}}
+      <span class="small">{{quiz.question.type}}</span>
+    </span>
   </h2>
 
-  <div class="ui grid">
+  <div class="large-text ui grid">
     <div ng-repeat="answer in quiz.answers" class="eight wide column answer">
       <button ng-click="goToResult(answer.meaning)"
-       class="ui blue button medium compact fluid">{{answer.meaning}}</button>
+       class="large-text ui blue button medium compact fluid">{{answer.meaning}}</button>
     </div>
   </div>
   <br>
@@ -17,7 +19,7 @@
   </div>
   <!-- <div class="col-lg-12">  
     <div class="row">  
-        <div style="background-color:#808080;" ng-style="{'width':model.width}">{{model.progress}}%</div>  
+        <div style="background-color:#808080;" ng-style="{'width':model.width}">{{quiz.determinateValue}}%</div>  
     </div>  
   </div>   -->
 </div>

@@ -8,16 +8,21 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body ng-app="app" ng-controller="MainController" id="top" class="ui basic segment">
-  <p>4000 English Words <br> </p>
+<body ng-app="app" ng-controller="MainController" id="top" class="ui basic segment flex-col">
 
   <div class="score-container">
-    <div class="ui label">
-      <i class="trophy icon"></i>High Score: <strong>{{quizService.highScore}}</strong>
+    <div class="small-padding">4000 English Words </div>
+    
+    <div class="ui label-clone">
+      <div class="mg-5">
+        <i class="trophy icon"></i>High Score: <strong>{{quizService.highScore}}</strong>
+      </div>
+      
+      <div class="mg-5">
+        <i class="trophy icon"></i>Score: <strong>{{quizService.score}}</strong>
+      </div>
     </div>
-    <div class="ui label">
-      <i class="trophy icon"></i>Score: <strong>{{quizService.score}}</strong>
-    </div>
+    
   </div>
 
   <div ng-view></div>
