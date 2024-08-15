@@ -51,18 +51,31 @@ a, a:focus {
 }
 
 .large-text {
-  font-size: 1.2em !important;
+  font-size: 1.15em !important;
 }
 
-.divider-line {
+.center-text {
   text-align: center;
-  border-bottom: 1px solid #000;
-  line-height: 0.1em;
+}
+
+.divider {
+  display: flex;
+  text-align: center;
+  align-items: center;
   margin: 1.4em 0;
 }
-.divider-with-text {
-  background: #fff;
-  padding: 0 10px;
+.divider::before, .divider::after {
+  flex: 1;
+  content: '';
+  border-bottom: 1px solid #000;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .25em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .25em;
 }
 
 .ui.header.main-header {

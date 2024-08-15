@@ -27,6 +27,7 @@ module.controller('IndexController', [
       $scope.stop(); 
       
       // store the interval promise
+      console.log('isStart', isStart)
       if(isStart){
         promise =  $interval(timeLost, 100, 0, true); 
       } 
@@ -34,6 +35,7 @@ module.controller('IndexController', [
     
     // stops the interval
     $scope.stop = function() {
+      console.log('stop interval')
       $interval.cancel(promise);
     };
   
