@@ -6,6 +6,12 @@ body {
 .flex-col {
   display: flex;
   flex-direction: column;
+  flex: 1;
+}
+
+.answer-container {
+  justify-content: start;
+  gap: 1.5em;
 }
 
 a, a:focus {
